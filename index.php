@@ -8,7 +8,7 @@
   <title>Sistema PetShop</title>
 </head>
 <body>
-  <header></header>
+  <header style="background-color: #fff"></header>
   <div class="main">
     <form id="form" name="task" method="get">
 
