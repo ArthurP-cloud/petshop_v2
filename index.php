@@ -36,10 +36,6 @@
     function cadastrado(mode,nome,cpf,telefone,endereço,nomepet,raçapet,corpet){
       $("#form").load("construto.php?mode="+mode+"&nomec="+nome+"&cpf="+cpf+"&telefone="+telefone+"&endereco="+endereço+"&nomepet="+nomepet+"&racapet="+raçapet+"&corpet="+corpet);
     }
-    // $("#btn-login").click(function(e){
-    //   e.preventDefault();
-    //   console.log('clicado');
-    // });
     $("#form").on("click", "#btn-login",function(e){
       e.preventDefault();
       build("login");
@@ -54,15 +50,7 @@
       var mode = "logado";
       var email = $("#email").val();
       var senha = $("#senha").val();
-      logado(mode,email,senha);
-
-      // $.ajax({
-      //   method: "GET",
-      //   url: "construto.php?mode=logado",
-      //   data: {email: email, senha: senha},
-      // }).done(function(){
-      //   window.location = 'construto.php?mode=logado&email='+email+"&senha="+senha;
-      // });      
+      logado(mode,email,senha);     
     })
     $("#form").on("click", "#btn-ok-logar", function(e){
       e.preventDefault();
@@ -77,10 +65,6 @@
       e.preventDefault();
       build('deslogar');
     })
-    // $("#form").on("click", "#btn-ok-deslogado", function(e){
-    //   e.preventDefault();
-    //   build('login');
-    // })
     $("#form").on("click", "#btn-logado-cadastrar", function(e){
       e.preventDefault();
       var mode = "cliente-cadastrado";
